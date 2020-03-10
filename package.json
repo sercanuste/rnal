@@ -78,5 +78,9 @@
             "node_modules/(?!(jest-)?react-native|react-navigation|native)"
         ]
     },
-    "dependencies": {}
+    "dependencies": {},
+    "homepage": "https://github.com/sercanuste/rnal#readme",
+    "directories": {
+        "example": "examples"
+    }
 }
