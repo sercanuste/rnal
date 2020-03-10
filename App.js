@@ -9,74 +9,76 @@
 
 import React, { Component } from "react";
 import {
-  Platform,
-  StyleSheet,
-  Text,
-  View,
-  TouchableHighlight,
-  TouchableOpacity,
-  Image
+    Platform,
+    StyleSheet,
+    Text,
+    View,
+    TouchableHighlight,
+    TouchableOpacity,
+    Image
 } from "react-native";
 import styled from "styled-components/native";
 
 type Props = {};
 type State = {
-  ready: boolean
+    ready: boolean
 };
 
 // import Fade from "./components/Fade";
+// import FadeOut from "./components/FadeOut";
 // import SlideUp from "./components/SlideUp";
 // import SlideDown from "./components/SlideDown";
 // import SlideInRight from "./components/SlideInRight";
 // import Rotate from "./components/Rotate";
 // import Zoom from "./components/Zoom";
 import {
-  Fade,
-  SlideDown,
-  SlideInRight,
-  SlideUp,
-  Zoom,
-  Rotate,
-  SlideInLeft
+    Fade,
+    FadeOut,
+    SlideDown,
+    SlideInRight,
+    SlideUp,
+    Zoom,
+    Rotate,
+    SlideInLeft
 } from "./index";
 export default class App extends Component<Props, State> {
-  state = {
-    ready: false
-  };
-  render() {
-    let { ready } = this.state;
-    return (
-      <Container>
-        <Button onPress={() => this.setState({ ready: true })}>
-          <ButtonText>Start</ButtonText>
-        </Button>
+    state = {
+        ready: false
+    };
+    render() {
+        let { ready } = this.state;
+        return (
+            <Container>
+                <Button onPress={() => this.setState({ ready: true })}>
+                    <ButtonText>Start</ButtonText>
+                </Button>
 
-        {/* <Fade style={styles.item} duration={300} startWhen={ready}>
+                {/* <Fade style={styles.item} duration={300} startWhen={ready}>
           <Text>Hello world center center center scsdgsdklgkdslgsdkl;;'</Text>
         </Fade> */}
-        {/* <SlideUp
+                {/* <SlideUp
           style={{ backgroundColor: "orange", flex: 1 }}
           startWhen={ready}
         >
           <Text>Slide Up component</Text>
         </SlideUp> */}
-        <Fade duration={100} startWhen={ready}>
-          <Image
-            source={require("./images/flowrs.jpg")}
-            height={200}
-            width={450}
-            style={{ width: 350, height: 200 }}
-            resizeMode="cover"
-          />
-        </Fade>
-        {/* <SlideDown startWhen={ready}>
+                <Fade duration={100} startWhen={ready}>
+                    <Image
+                        source={require("./images/flowrs.jpg")}
+                        height={200}
+                        width={450}
+                        style={{ width: 350, height: 200 }}
+                        resizeMode="cover"
+                    />
+                </Fade>
+                {/* <SlideDown startWhen={ready}>
           <Card>
             <WhiteText>SlideDown animation</WhiteText>
           </Card>
         </SlideDown> */}
-      </Container>
-    );
-  }
+            </Container>
+        );
+    }
 }
 
 const WhiteText = styled.Text`
